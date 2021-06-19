@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Map by Alkali1234</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <link rel="icon" type="image/png" href="map.png">
+
+    
+    <style>
+        #map{
+            height: 800px;
+            margin-top: 20px;
+            border: 5px solid black;
+            margin-right: 5px;
+        }
+        #closebuttonimage{
+            max-width: 20px;
+        }
+        #formButtons{
+            display: flex;
+            justify-content: space-between;
+        }
+        #closeButton{
+            display: flex;
+            justify-items: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="row vh-100">
+        <div class="col-sm-3 bg-dark text-white">
+            <h3 class="text-center">Disaster Recovery Map</h3>
+            <div class="card mt-4">
+                <div class="card-body text-dark d-none" id="form-container">
+                   <form action="" id="form1">
+                    <div>
+                        <label for="notes">Spot Name</label>
+                        <input type="text" class="form-control" id="spotName" placeholder="Spot Name">
+                    </div>
+                    <div class="mb-2">
+                        <label for="notes" class="form-label"></label>
+                        <select name="" id="location-type" class="form-control">
+                            <option value="">--Select Type--</option>
+                            <option value="1">Disaster</option>
+                            <option value="2">Food</option>
+                            <option value="3">Hospital</option>
+                        </select>
+                    </div>
+                    <div id="formButtons">
+                        <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+                        <div id="close button">
+                            <button type="button" class="btn btn-primary" id="close"><img src="remove.png" alt="Close" id="closebuttonimage"></button>
+                        </div>
+                    </div>
+                </form> 
+                </div>
+                
+            </div> <!-- END OF CARD FORM -->
+
+            <!-- Beforebegin -->
+            <div id="locations" class="my-4">
+                <!-- afterbegin -->
+                <h4 class="header-title" style="margin-left: 20px;">Locations</h4>
+                <!-- <div class="card bg-success">
+                    <div class="card-body">
+                        <h5>RS. Metia Setia</h5>
+                    </div>
+                </div> -->
+
+                <!-- beefore end -->
+            </div>
+            <!-- afterend -->
+        </div>
+        <div class="col-sm-9">
+            <div id="map">
+                
+            </div>
+        </div>
+    </div>
+    <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+    <script src="recoveryr.js"></script>
+</body>
+</html>
